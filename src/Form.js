@@ -36,18 +36,23 @@ export default function Form() {
           placeholder="Type a city.."
           value={city}
           onChange={cityChange}
+          className="form-search"
         />
-        <input type="submit" value="Search" />
+        <input className="form-button" type="submit" value="Search" />
       </form>
 
       {forecast && (
-        <div>
+        <div className="forecast">
+            <div className="forecast-text">
           <h3>Weather forecast:</h3>
           <p> Temperature: {Math.round(forecast.temperature.current)}°C </p>
           <p> Description: {forecast.condition.description} </p>
           <p> Humidity: {forecast.temperature.humidity} % </p>
           <p> Wind: {Math.round(forecast.wind.speed)} km/h </p>
+          </div>
+          <div className="forecast-icon">
           <img src={forecast.condition.icon_url} />
+          </div>
         </div>
       )}
     </div>
