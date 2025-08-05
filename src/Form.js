@@ -51,7 +51,7 @@ export default function Form() {
           <p> Wind: {Math.round(forecast.wind.speed)} km/h </p>
           </div>
           <div className="forecast-icon">
-          <img src={forecast.condition.icon_url} />
+          <img src={forecast.condition.icon_url} alt="forecast icon"/>
           </div>
         </div>
       )}
